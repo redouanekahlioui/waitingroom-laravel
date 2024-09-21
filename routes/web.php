@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WaitingRoomController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/waiting-room', [WaitingRoomController::class, 'index'])->name('waiting.room');
